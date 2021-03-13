@@ -1,0 +1,30 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{113B3E01-586C-4AE2-99C6-06E8E9F92CE8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="base.json">
+    <Files>
+      <File FileName="base.json" Line="12" Column="35" />
+      <File FileName="Controllers/FornecedoresController.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebApiFornecedor" expanded="True">
+            <Node name="WebApiFornecedor" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="base.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WebApiFornecedor PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

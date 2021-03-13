@@ -26,7 +26,7 @@ namespace WebApiFornecedor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen();
+            //services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,12 +37,12 @@ namespace WebApiFornecedor
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-                   {
-                       c.SwaggerEndpoint("/swagger/v1/swagger.json","Interface lvl 3 api Rest");
+            // app.UseSwagger();
+            // app.UseSwaggerUI(c =>
+            //        {
+            //            c.SwaggerEndpoint("/swagger/v1/swagger.json","Interface api RestFull");
 
-                   });
+            //        });
 
             app.UseHttpsRedirection();
 
