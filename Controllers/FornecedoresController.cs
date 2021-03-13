@@ -15,27 +15,33 @@ namespace WebApiFornecedor.Controllers
             return _fornecedores.ListaFornecedores();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public Fornecedor Get(int id){
             Fornecedor _fornec = new Fornecedor(); 
-            return _fornec.ListaFornecedores().Where( f => f.id == id).FirstOrDefault();
+            var achouFornec = _fornec.ListaFornecedores().Where( f => f.id == id).FirstOrDefault();
+            if (achouFornec==null){
+                return null;
+            }
+            return achouFornec;
         }
 
         [HttpPost]
-        public List<Fornecedor> Post(Fornecedor fornec){
+        public Fornecedor Post([FromBody] Fornecedor fornec){
             Fornecedor _fornec = new Fornecedor();
             _fornec.InserirFornecedor(fornec);
-            return _fornec.ListaFornecedores();
+            return fornec;
         }
 
-        [HttpPut]
-        public void Put(int id, Fornecedor fornec)
+        [HttpPut("{id}")]
+        public Fornecedor Put(int id, [FromBody] Fornecedor fornec)
         {
             Fornecedor _fornec = new Fornecedor(); 
-            _fornec.AtualizarFornecedor(id, _fornec);
+            
+            _fornec.AtualizarFornecedor(id,fornec);
+            return fornec;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public void Delete(int id)
         {
             Fornecedor _fornec = new Fornecedor(); 

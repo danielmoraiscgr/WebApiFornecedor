@@ -1,14 +1,26 @@
 [
   {
     "id": 1,
-    "razaosocial": "Fort Atacadista",
-    "nomeempresa": "Fort Atacadista",
+    "razaosocial": "Comercial Pereira de Alimentos Ltda",
+    "nomeempresa": "Supermercado Comper",
     "ramoatividade": "Alimentício"
   },
   {
     "id": 2,
-    "razaosocial": "Comercial Pereira de Alimentos",
-    "nomeempresa": "Supermercado Comper",
-    "ramoatividade": "Alimentício"
+    "razaosocial": "Farmacia Popular",
+    "nomeempresa": "Farmacia Popular",
+    "ramoatividade": "Medicamentos"
+  },
+  {
+    "id": 3,
+    "razaosocial": "Planeta Utensilios",
+    "nomeempresa": "Loja Planeja de Utensilios",
+    "ramoatividade": "Acessorios e Utensilios"
+  },
+  {
+    "id": 4,
+    "razaosocial": "Chiquinho Sorveteria",
+    "nomeempresa": "Chiquinho Sorveteria S/A",
+    "ramoatividade": "Sorvetes"
   }
 ]
