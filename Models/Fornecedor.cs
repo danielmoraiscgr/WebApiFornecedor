@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 using System.Linq;
+using WebApiFornecedor.Data;
 
 namespace WebApiFornecedor.Models
 {
@@ -14,22 +15,16 @@ namespace WebApiFornecedor.Models
         public string nomeempresa { get; set; }
         public string ramoatividade { get; set; }
 
-        // private List<Fornecedor> _listafor = new List<Fornecedor>();
+        private readonly DbContext _dbContext;
 
-        // public Fornecedor()
-        // {
-        //     _listafor.Add(new Fornecedor() { id = 1, razaosocial = "Fort Atacadista", nomeempresa = "Fort Atacadista", ramoatividade = "Atacado e Varejo" });
-        //     _listafor.Add(new Fornecedor() { id = 2, razaosocial = "Comercio Pereira de Alimentos", nomeempresa = "Supermercados Comper", ramoatividade = "Atacado e Varejo" });
-        //     _listafor.Add(new Fornecedor() { id = 3, razaosocial = "Atacadao", nomeempresa = "Atacadao", ramoatividade = "Atacado e Varejo" });
-        //     _listafor.Add(new Fornecedor() { id = 4, razaosocial = "Farmacia Popular", nomeempresa = "Farmacia Popular", ramoatividade = "Medicamentos" });
-        //     _listafor.Add(new Fornecedor() { id = 5, razaosocial = "Posto Ipiringa", nomeempresa = "Posto Ipiringa", ramoatividade = "Combustivel" });
-        //     Console.Write(_listafor);
-        // }
+        public Fornecedor()
+        {
+            _dbContext = new DbContext();
+        }
 
         public List<Fornecedor> ListaFornecedores()
         {
-            var dbFornecedores = AppDomain.CurrentDomain.BaseDirectory + @"base.json";
-            var json = File.ReadAllText(dbFornecedores);
+            var json = File.ReadAllText(_dbContext.CaminhoBanco());
             var listaFornecedores = JsonConvert.DeserializeObject<List<Fornecedor>>(json);
 
             return listaFornecedores; 
@@ -37,31 +32,27 @@ namespace WebApiFornecedor.Models
 
         public bool AtualizarDbFor(List<Fornecedor> listaFornecedores)
         {
-            var dbFornecedores = AppDomain.CurrentDomain.BaseDirectory + @"base.json";
             var json = JsonConvert.SerializeObject(listaFornecedores, Formatting.Indented);
-            File.WriteAllText(dbFornecedores, json);
+            File.WriteAllText(_dbContext.CaminhoBanco(), json);
             return true;
         }
 
         public Fornecedor InserirFornecedor(Fornecedor fornec){
-            Console.WriteLine(JsonConvert.SerializeObject(fornec));
             var ListaFornecedores = this.ListaFornecedores();
-            var maxId = ListaFornecedores.Max(f => f.id); // Max using System.LINQ
+            var maxId = ListaFornecedores.Max(f => f.id);
             fornec.id = maxId + 1;      
             ListaFornecedores.Add(fornec);      
             AtualizarDbFor(ListaFornecedores);
             return fornec;
         }
 
-        public Fornecedor AtualizarFornecedor(int id, Fornecedor fornec){
-            Console.WriteLine(JsonConvert.SerializeObject(fornec));
+        public Fornecedor AtualizarFornecedor(int id, Fornecedor fornec){          
             var ListaFornecedores = this.ListaFornecedores();
             var itemIndex = ListaFornecedores.FindIndex( p=> p.id == id);
             if (itemIndex >= 0) 
             {
                 fornec.id = id;
-                ListaFornecedores[itemIndex] = fornec;
-                
+                ListaFornecedores[itemIndex] = fornec;                
             }
             else
             {
@@ -86,10 +77,6 @@ namespace WebApiFornecedor.Models
             AtualizarDbFor(ListaFornecedores);
             return true; 
         }
-
-
-
-
-
+        
     }
 }

@@ -8,44 +8,47 @@ namespace WebApiFornecedor.Controllers
     [Route("api/[controller]")]
     public class FornecedoresController : ControllerBase
     {
-        [HttpGet]
-        public List<Fornecedor> Get()
+        private readonly Fornecedor _fornecedores;
+
+        public FornecedoresController()
         {
-            Fornecedor _fornecedores = new Fornecedor();
-            return _fornecedores.ListaFornecedores();
+            _fornecedores = new Fornecedor();
+
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_fornecedores.ListaFornecedores());         
         }
 
         [HttpGet("{id}")]
-        public Fornecedor Get(int id){
-            Fornecedor _fornec = new Fornecedor(); 
-            var achouFornec = _fornec.ListaFornecedores().Where( f => f.id == id).FirstOrDefault();
-            if (achouFornec==null){
+        public Fornecedor Get(int id)
+        {
+            var fornec = _fornecedores.ListaFornecedores().Where( f => f.id == id).FirstOrDefault();
+            if (fornec ==null){
                 return null;
             }
-            return achouFornec;
+            return fornec;
         }
 
         [HttpPost]
         public Fornecedor Post([FromBody] Fornecedor fornec){
-            Fornecedor _fornec = new Fornecedor();
-            _fornec.InserirFornecedor(fornec);
+            _fornecedores.InserirFornecedor(fornec);
             return fornec;
         }
 
         [HttpPut("{id}")]
         public Fornecedor Put(int id, [FromBody] Fornecedor fornec)
-        {
-            Fornecedor _fornec = new Fornecedor(); 
-            
-            _fornec.AtualizarFornecedor(id,fornec);
+        {         
+            _fornecedores.AtualizarFornecedor(id,fornec);
             return fornec;
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            Fornecedor _fornec = new Fornecedor(); 
-            _fornec.DeletarFornecedor(id);
+            _fornecedores.DeletarFornecedor(id);
         }
     }
 }
