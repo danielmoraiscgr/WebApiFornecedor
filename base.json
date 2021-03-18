@@ -16,5 +16,11 @@
     "razaosocial": "Chiquinho Sorveteria",
     "nomeempresa": "Chiquinho Sorveteria S/A",
     "ramoatividade": "Sorvetes"
+  },
+  {
+    "id": 4,
+    "razaosocial": "Atacadao Supermercado Atacadista",
+    "nomeempresa": "Atacadao Supermercado Atacadista",
+    "ramoatividade": "Alimenticio"
   }
 ]

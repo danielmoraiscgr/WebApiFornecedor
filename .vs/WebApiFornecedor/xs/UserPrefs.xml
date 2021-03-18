@@ -1,13 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{113B3E01-586C-4AE2-99C6-06E8E9F92CE8}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="base.json">
     <Files>
       <File FileName="Models/Fornecedor.cs" Line="33" Column="71" />
+      <File FileName="Controllers/FornecedoresController.cs" Line="1" Column="1" />
+      <File FileName="base.json" Line="19" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebApiFornecedor" expanded="True">
             <Node name="WebApiFornecedor" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="base.json" selected="True" />
             </Node>
