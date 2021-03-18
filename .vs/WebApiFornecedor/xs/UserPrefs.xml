@@ -1,20 +1,15 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{113B3E01-586C-4AE2-99C6-06E8E9F92CE8}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Controllers/FornecedoresController.cs" Line="16" Column="1" />
-      <File FileName="Models/Fornecedor.cs" Line="26" Column="10" />
-      <File FileName="Data/DbContext.cs" Line="9" Column="20" />
+      <File FileName="Models/Fornecedor.cs" Line="33" Column="71" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebApiFornecedor" expanded="True">
             <Node name="WebApiFornecedor" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="FornecedoresController.cs" selected="True" />
-              </Node>
-              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="base.json" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,6 +19,7 @@
   <MonoDevelop.Ide.ItemProperties.WebApiFornecedor PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

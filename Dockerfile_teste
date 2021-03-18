@@ -1,0 +1,24 @@
+# Nuget restore
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+WORKDIR /src
+COPY *.sln . 
+COPY agendaweb/*csproj agendaweb/
+RUN dotnet restore
+COPY . . 
+
+# testing
+FROM build AS testing
+WORKDIR /src/agendaweb
+RUN dotnet build
+
+# publish
+FROM build AS publish
+WORKDIR /src/agendaweb
+RUN dotnet publish -c Release -o /src/publish
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS runtime
+WORKDIR /app
+COPY --from=publish /src/publish . 
+# ENTRYPOINT ["dotnet", "agendaweb.dll"]
+# Heroku uses the following
+CMD ASPNETCORE_URL=http://*:$PORT dotnet agendaweb.dll
