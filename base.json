@@ -34,5 +34,11 @@
     "razaosocial": "Supermercado Pires",
     "nomeempresa": "Supermercado Pires",
     "ramoatividade": "Alimenticio"
+  },
+  {
+    "id": 7,
+    "razaosocial": "Academia SmartFitness",
+    "nomeempresa": "Academia SmartFitness",
+    "ramoatividade": "Academia"
   }
 ]
