@@ -1,11 +1,12 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{113B3E01-586C-4AE2-99C6-06E8E9F92CE8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Dockerfile">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Models/Fornecedor.cs" Line="33" Column="71" />
       <File FileName="Controllers/FornecedoresController.cs" Line="1" Column="1" />
-      <File FileName="base.json" Line="45" Column="12" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="Dockerfile" Line="1" Column="1" />
+      <File FileName="base.json" Line="38" Column="4" />
+      <File FileName="appsettings.json" />
+      <File FileName="Dockerfile" />
+      <File FileName="Properties/PublishProfiles/webapifornecedores - Web Deploy.pubxml" Line="19" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +15,10 @@
             <Node name="WebApiFornecedor" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Dockerfile" selected="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+              </Node>
+              <Node name="base.json" selected="True" />
             </Node>
           </Node>
         </State>

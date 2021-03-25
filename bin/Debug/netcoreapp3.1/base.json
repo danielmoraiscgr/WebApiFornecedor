@@ -16,5 +16,29 @@
     "razaosocial": "Chiquinho Sorveteria",
     "nomeempresa": "Chiquinho Sorveteria S/A",
     "ramoatividade": "Sorvetes"
+  },
+  {
+    "id": 4,
+    "razaosocial": "Atacadao Supermercado Atacadista",
+    "nomeempresa": "Atacadao Supermercado Atacadista",
+    "ramoatividade": "Alimenticio"
+  },
+  {
+    "id": 5,
+    "razaosocial": "Assai Supermercado Atacadista",
+    "nomeempresa": "Assai Supermercado Atacadista",
+    "ramoatividade": "Alimenticio"
+  },
+  {
+    "id": 6,
+    "razaosocial": "Supermercado Pires",
+    "nomeempresa": "Supermercado Pires",
+    "ramoatividade": "Alimenticio"
+  },
+  {
+    "id": 7,
+    "razaosocial": "Academia SmartFitness",
+    "nomeempresa": "Academia SmartFitness",
+    "ramoatividade": "Academia"
   }
 ]
