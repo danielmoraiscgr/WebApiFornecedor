@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O9TgdjfJifQS2AY5U1XafBQ4ROnRbUrUOY1WSUYz9B/gM068+UjNf6CEgFG1BhKN792B5rrYuCF+xLXrxwDw0A==",
+  "dgSpecHash": "RcWvmei2x7diB3hf6EEKrPXg+bs44XdbUZBI/wRlim6CR14+StOa5n4Cn2le164/C/Nhem7Pzk8QWj9ElJR+8A==",
   "success": true,
   "projectFilePath": "/Users/danielmorais/Projects/WebApiFornecedor/WebApiFornecedor.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "/Users/danielmorais/.nuget/packages/microsoft.extensions.primitives/2.2.0/microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "/Users/danielmorais/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/danielmorais/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/danielmorais/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/danielmorais/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/danielmorais/.nuget/packages/swashbuckle.aspnetcore.swagger/6.1.0/swashbuckle.aspnetcore.swagger.6.1.0.nupkg.sha512",
     "/Users/danielmorais/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.1.0/swashbuckle.aspnetcore.swaggergen.6.1.0.nupkg.sha512",
     "/Users/danielmorais/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.1.0/swashbuckle.aspnetcore.swaggerui.6.1.0.nupkg.sha512",

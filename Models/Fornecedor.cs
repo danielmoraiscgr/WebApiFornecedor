@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 using System.Linq;
 using WebApiFornecedor.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiFornecedor.Models
 {
@@ -14,6 +15,7 @@ namespace WebApiFornecedor.Models
         public string razaosocial { get; set; }
         public string nomeempresa { get; set; }
         public string ramoatividade { get; set; }
+        public string data { get; set; }
 
         private readonly DbContext _dbContext;
 

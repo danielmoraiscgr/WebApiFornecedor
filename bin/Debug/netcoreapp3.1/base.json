@@ -40,5 +40,17 @@
     "razaosocial": "Academia SmartFitness",
     "nomeempresa": "Academia SmartFitness",
     "ramoatividade": "Academia"
+  },
+  {
+    "id": 8,
+    "razaosocial": "Agropecuaria JB",
+    "nomeempresa": "Grupo Bumlai",
+    "ramoatividade": "Pecuaria"
+  },
+  {
+    "id": 9,
+    "razaosocial": "Planeta Utensilios",
+    "nomeempresa": "Planeta Utensilios",
+    "ramoatividade": "Utensilios"
   }
 ]

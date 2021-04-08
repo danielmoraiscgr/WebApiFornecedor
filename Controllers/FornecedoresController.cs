@@ -2,6 +2,8 @@
 using WebApiFornecedor.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System;
+using System.Net;
 
 namespace WebApiFornecedor.Controllers
 {
@@ -19,18 +21,61 @@ namespace WebApiFornecedor.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_fornecedores.ListaFornecedores());         
-        }
-
-        [HttpGet("{id}")]
-        public Fornecedor Get(int id)
-        {
-            var fornec = _fornecedores.ListaFornecedores().Where( f => f.id == id).FirstOrDefault();
-            if (fornec ==null){
+            try
+            {
+                return Ok(_fornecedores.ListaFornecedores());
+            }
+            catch (Exception ex)
+            {
                 return null;
             }
-            return fornec;
+
         }
+              
+
+        [HttpGet("{id}")]
+        //[Route("Recuperar/{id:int}/")]
+        public Fornecedor Get(int id)
+        {
+            try
+            {
+                var fornec = _fornecedores.ListaFornecedores().Where(f => f.id == id).FirstOrDefault();
+                if (fornec == null)
+                {
+                    return null;
+                }
+                return fornec;
+            }
+            catch (Exception ex)
+            {
+                return null;
+
+            }           
+        }
+
+        //[HttpGet]
+        //[Route(@"RecuperarPorDataEmpresa/{data:regex([0-9]{4}\-[0-9]{2}))/razaosocial:minlength(5)}")]
+        //public IActionResult Recuperar(string data, string razaosocial)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<Fornecedor> fornecedores = _fornecedores.ListaFornecedores().Where(x => x.data == data || x.razaosocial == razaosocial);
+        //        if (!fornecedores.Any())
+        //        {
+        //            return NotFound();
+        //        }
+
+        //        return Ok(fornecedores);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return null; 
+
+        //    }
+        //}
+
+
 
         [HttpPost]
         public Fornecedor Post([FromBody] Fornecedor fornec){
